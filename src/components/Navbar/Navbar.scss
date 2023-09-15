@@ -1,0 +1,49 @@
+@import "../../styles/global.scss";
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 40px;
+  margin-bottom: 90px;
+
+  .logo {
+    width: 152px;
+    height: 50;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    .link {
+      position: relative;
+      @include inter(18px, $clr-white, 400, 160%);
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: $clr-primary;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: -1px;
+          width: 100%;
+          height: 1px;
+          background: linear-gradient(
+            270deg,
+            rgba(255, 255, 255, 0) 0%,
+            #42b4ee 48.85%,
+            rgba(255, 255, 255, 0) 100%
+          );
+        }
+      }
+    }
+  }
+}

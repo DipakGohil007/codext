@@ -1,0 +1,16 @@
+@import "../../styles/global.scss";
+
+.button {
+  padding: 15px 30px;
+  border-radius: 5px;
+
+  @include inter(18px, $clr-white, 500, 160%);
+}
+
+.primary-btn {
+  background-color: $clr-primary;
+}
+
+.secondary-btn {
+  background-color: $clr-light-blue;
+}

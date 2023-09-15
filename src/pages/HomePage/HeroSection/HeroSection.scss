@@ -1,0 +1,39 @@
+@import "../../../styles/global.scss";
+
+.hero-section {
+  height: 100vh;
+  background: url("../../../assets/images/mask.png"),
+    linear-gradient(251deg, #461096 0.57%, #7f3ce0 99.97%);
+  padding-top: 100px;
+
+  .hero-wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .hero-content {
+      .hero-title {
+        max-width: 498px;
+        width: 100%;
+        @include inter(62px, $clr-white, 600, 120%);
+        margin-bottom: 25px;
+      }
+
+      .hero-description {
+        max-width: 435px;
+        width: 100%;
+        @include inter(18px, $clr-white, 400, 160%);
+        margin-bottom: 35px;
+      }
+    }
+
+    .hero-mockup {
+      flex: 0 1 50%;
+      img {
+        width: 751.698px;
+        height: 561.678px;
+      }
+    }
+  }
+}
