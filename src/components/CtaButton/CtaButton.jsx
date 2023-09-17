@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Button.scss";
+import "./CtaButton.scss";
 
-const Button = ({ type, text }) => {
+const CtaButton = ({ type, text }) => {
   return (
     <Link
       to={"/"}
@@ -15,4 +15,4 @@ const Button = ({ type, text }) => {
   );
 };
 
-export default Button;
+export default CtaButton;

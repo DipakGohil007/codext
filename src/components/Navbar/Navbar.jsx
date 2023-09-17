@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { images } from "../../assets/images/images";
 import { Link } from "react-router-dom";
+import CtaButton from "../CtaButton/CtaButton";
+import { Button } from "antd";
+import { GiHamburgerMenu } from "react-icons/gi";
 import "./Navbar.scss";
-import Button from "../Button/Button";
 
 const Navbar = () => {
+  const [hamburgerActive, setHamburgerActive] = useState(false);
+  const navRef = useRef();
+  const showNavbar = () => {
+    navRef.current.classList.toggle("hamburger");
+    setHamburgerActive(!hamburgerActive);
+  };
+
   return (
-    <div className="navbar">
+    <div className="navbar" ref={navRef}>
       <img src={images.Logo} alt="logo" className="logo" />
       <div className="nav-links">
         <Link to={"/"} className="link">
@@ -24,8 +33,11 @@ const Navbar = () => {
         <Link to={"/"} className="link">
           Blog
         </Link>
-        <Button type="primary" text="FREE TRIAL" />
+        <CtaButton type="primary" text="FREE TRIAL" />
       </div>
+      <Button className="hamburger-menu" onClick={showNavbar}>
+        <GiHamburgerMenu />
+      </Button>
     </div>
   );
 };

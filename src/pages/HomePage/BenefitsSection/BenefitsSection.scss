@@ -1,0 +1,36 @@
+@import "../../../styles/global.scss";
+
+.benefits-section {
+  display: flex;
+  gap: 133px;
+
+  .benefits-mockup {
+    max-width: 625px;
+    width: 100%;
+  }
+
+  .benefits-content {
+    max-width: 508px;
+
+    .section-title {
+      margin-bottom: 50px;
+    }
+
+    .benefits-wrapper {
+      .benefit-title {
+        @include inter(25px, $clr-black, 400, 160%);
+        margin-bottom: 10px;
+
+        .arrow {
+          display: inline-block;
+          margin-right: 25px;
+        }
+      }
+
+      .benefit-desc {
+        @include inter(14px, $clr-black, 400, 160%);
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

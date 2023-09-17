@@ -1,13 +1,17 @@
 @import "../../../styles/global.scss";
 
 .hero-section {
-  height: 100vh;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
   background: url("../../../assets/images/mask.png"),
     linear-gradient(251deg, #461096 0.57%, #7f3ce0 99.97%);
   padding-top: 100px;
+  margin-bottom: 230px;
 
   .hero-wrapper {
     height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,6 +22,14 @@
         width: 100%;
         @include inter(62px, $clr-white, 600, 120%);
         margin-bottom: 25px;
+
+        @media (max-width: 1200px) {
+          max-width: 420px;
+          font-size: 47px;
+        }
+        @media (max-width: 576px) {
+          font-size: 40px;
+        }
       }
 
       .hero-description {
@@ -25,14 +37,27 @@
         width: 100%;
         @include inter(18px, $clr-white, 400, 160%);
         margin-bottom: 35px;
+
+        @media (max-width: 1200px) {
+          max-width: 420px;
+        }
+
+        @media (max-width: 576px) {
+          font-size: 16px;
+          line-height: 150%;
+        }
       }
     }
 
     .hero-mockup {
       flex: 0 1 50%;
       img {
-        width: 751.698px;
-        height: 561.678px;
+        max-width: 751px;
+        width: 100%;
+      }
+
+      @media (max-width: 800px) {
+        display: none;
       }
     }
   }

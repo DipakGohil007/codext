@@ -3,8 +3,12 @@
 .button {
   padding: 15px 30px;
   border-radius: 5px;
+  @include inter(18px, $clr-white, 500, 100%);
+  transition: all 0.5s ease;
 
-  @include inter(18px, $clr-white, 500, 160%);
+  &:hover {
+    background-color: $clr-hover-blue;
+  }
 }
 
 .primary-btn {

@@ -1,11 +1,11 @@
 import React from "react";
 import "./HeroSection.scss";
-import Button from "../../../components/Button/Button";
+import Button from "../../../components/CtaButton/CtaButton";
 import { images } from "../../../assets/images/images";
 
 const HeroSection = () => {
   return (
-    <div className="hero-section">
+    <div className="hero-section container-fluid">
       <div className=" hero-wrapper">
         <div className="hero-content">
           <h1 className="hero-title">Codext one of the best system in SAAS.</h1>

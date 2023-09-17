@@ -1,2 +1,10 @@
 @import "mixins";
 @import "variables";
+
+.section-title {
+  @include inter(44px, $clr-black, 600, 130%);
+
+  @media (max-width: 576px) {
+    font: size 34px;
+  }
+}
