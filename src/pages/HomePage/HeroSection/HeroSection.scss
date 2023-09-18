@@ -7,7 +7,7 @@
   background: url("../../../assets/images/mask.png"),
     linear-gradient(251deg, #461096 0.57%, #7f3ce0 99.97%);
   padding-top: 100px;
-  margin-bottom: 230px;
+  margin-bottom: 140px;
 
   .hero-wrapper {
     height: 100%;
@@ -60,5 +60,9 @@
         display: none;
       }
     }
+  }
+
+  @media (max-width: 992px) {
+    margin-bottom: 50px;
   }
 }

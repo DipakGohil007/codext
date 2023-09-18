@@ -1,0 +1,48 @@
+@import "../../../../styles/global.scss";
+
+.review-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  background: $clr-white;
+  box-shadow: 0px 4px 50px 5px rgba(5, 17, 20, 0.05);
+  padding: 60px 55px;
+
+  .user-review {
+    position: relative;
+    @include inter(12px, $clr-black, 500, 160%);
+    font-style: italic;
+    margin-bottom: 25px;
+    max-width: 200px;
+
+    &::before {
+      content: url(../../../../assets/svg/IconQuote.svg);
+      position: absolute;
+      left: -30px;
+      top: -5px;
+    }
+  }
+
+  .user-profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .user-image {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+  }
+  .user-details {
+    .user-name {
+      @include inter(20px, $clr-black, 400, 140%);
+      margin-bottom: 5px;
+    }
+    .user-designation {
+      @include inter(10px, $clr-black, 400, 160%);
+    }
+  }
+}

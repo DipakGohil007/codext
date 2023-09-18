@@ -1,0 +1,42 @@
+@import "../../../../styles/global.scss";
+
+.news-card {
+  max-width: 530px;
+
+  .news-img {
+    width: 100%;
+    margin-bottom: 30px;
+    object-fit: cover;
+  }
+
+  .credit-line {
+    display: flex;
+    gap: 60px;
+    @include inter(16px, $clr-black, 400, 160%);
+    margin-bottom: 22px;
+
+    @media (max-width: 576px) {
+      gap: 30px;
+    }
+  }
+
+  .news-title {
+    @include inter(22px, $clr-black, 500, 150%);
+    margin-bottom: 20px;
+
+    @media (max-width: 576px) {
+      margin-bottom: 10px;
+    }
+  }
+
+  .news-desc {
+    @include inter(14px, $clr-black, 400, 160%);
+    max-width: 427px;
+    opacity: 0.7;
+    margin-bottom: 35px;
+  }
+
+  @media (max-width: 1200px) {
+    max-width: 520px;
+  }
+}

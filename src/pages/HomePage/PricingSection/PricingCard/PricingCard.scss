@@ -1,0 +1,103 @@
+@import "../../../../styles/global.scss";
+
+.pricing-card {
+  display: flex;
+  flex: 1 1 360px;
+  max-width: 300px;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  background: $clr-white;
+  box-shadow: 0px 6px 50px 5px rgba(6, 14, 26, 0.05);
+  overflow: hidden;
+  padding-bottom: 50px;
+
+  .pricing-header {
+    position: relative;
+    width: 100%;
+    min-height: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-top: 50px;
+
+    .plan-level {
+      @include inter(22px, $clr-black, 500, 150%);
+      margin-bottom: 13px;
+    }
+
+    svg {
+      margin-bottom: 7px;
+    }
+
+    .plan-price {
+      @include inter(32px, $clr-black, 500, 140%);
+      margin-bottom: 40px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("../../../../assets/images/hover-image2.png");
+      background-size: cover;
+      background-position: bottom;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    @media (max-width: 576px) {
+      min-height: unset;
+      padding-top: 30px;
+    }
+  }
+
+  .plan-features {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 40px;
+
+    .feature {
+      text-align: center;
+      @include inter(16px, $clr-black, 400, 160%);
+    }
+
+    @media (max-width: 576px) {
+      margin-bottom: 25px;
+    }
+  }
+
+  .button {
+    &:hover {
+      background: rgba(66, 180, 238, 0.1);
+      color: $clr-primary;
+    }
+  }
+
+  &:hover {
+    .pricing-header {
+      &::before {
+        opacity: 1; /* Make the overlay visible on hover */
+      }
+    }
+
+    .plan-level,
+    svg,
+    .plan-price {
+      position: relative;
+      z-index: 2;
+      color: $clr-white;
+    }
+  }
+
+  @media (max-width: 576px) {
+    padding-bottom: 30px;
+    max-width: 100%;
+  }
+}

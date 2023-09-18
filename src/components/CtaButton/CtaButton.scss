@@ -9,6 +9,11 @@
   &:hover {
     background-color: $clr-hover-blue;
   }
+
+  @media (max-width: 576px) {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
 }
 
 .primary-btn {

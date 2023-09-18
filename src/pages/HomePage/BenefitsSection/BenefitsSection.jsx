@@ -7,7 +7,7 @@ import "./BenefitsSection.scss";
 
 const BenefitsSection = () => {
   return (
-    <div className="benefits-section">
+    <div className="benefits-section ">
       <img
         src={images.BenefitsMockup}
         alt="Benefits Mockup"

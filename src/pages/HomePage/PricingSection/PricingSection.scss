@@ -1,0 +1,46 @@
+@import "../../../styles/global.scss";
+
+.pricing-section {
+  position: relative;
+  margin-bottom: 140px;
+
+  .section-title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .pricing-filter {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+
+    .type {
+      @include inter(22px, $clr-black, 500, 150%);
+
+      @media (max-width: 576px) {
+        font-size: 18px;
+      }
+    }
+
+    .interval {
+      @include inter(22px, $clr-black, 500, 150%);
+      opacity: 0.7;
+      @media (max-width: 576px) {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .plan-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+
+  @media (max-width: 576px) {
+    margin-bottom: 50px;
+  }
+}

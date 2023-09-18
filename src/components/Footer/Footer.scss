@@ -1,0 +1,102 @@
+@import "../../styles/global.scss";
+
+.footer {
+  background-color: $clr-black;
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 100px;
+    padding-bottom: 80px;
+    border-bottom: 1px solid $clr-white-50;
+
+    .footer-column {
+      display: flex;
+      flex-direction: column;
+
+      .logo {
+        width: 152px;
+        margin-bottom: 30px;
+
+        @media (max-width: 576px) {
+          width: 130px;
+        }
+      }
+
+      .title {
+        @include inter(22px, $clr-white, 500, 140%);
+        margin-bottom: 30px;
+      }
+
+      .link-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .footer-link {
+          @include inter(16px, $clr-white, 400, 160%);
+          opacity: 0.7;
+        }
+      }
+
+      .desc {
+        @include inter(16px, $clr-white, 400, 160%);
+        opacity: 0.7;
+        max-width: 288px;
+        margin-bottom: 30px;
+      }
+
+      .social-wrapper {
+        display: flex;
+        gap: 30px;
+
+        .social-link {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          padding: 10px;
+          color: $clr-white;
+          border: 1px solid $clr-white-50;
+        }
+      }
+
+      .input-group {
+        border-radius: 5px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+
+        .email-input {
+          padding-block: 15px;
+          padding-left: 30px;
+          background-color: $clr-black;
+          color: $clr-white;
+          border: none;
+          @include inter(16px, $clr-white, 400, 160%);
+
+          &::placeholder {
+            @include inter(16px, $clr-white, 400, 160%);
+            opacity: 0.7;
+          }
+        }
+
+        .button {
+          padding: 15px 30px;
+          @include inter(16px, $clr-white, 500, 160%);
+          background-color: $clr-primary;
+          cursor: pointer;
+          border: none;
+        }
+      }
+    }
+
+    @media (max-width: 992px) {
+      flex-direction: column;
+    }
+  }
+
+  .copyright {
+    @include inter(18px, $clr-white, 500, 160%);
+    opacity: 0.7;
+    text-align: center;
+    padding-block: 30px;
+  }
+}

@@ -10,10 +10,14 @@
   align-items: center;
   padding: 40px;
   padding-bottom: 90px;
+  z-index: 99;
 
   .logo {
     width: 152px;
-    height: 50;
+
+    @media (max-width: 576px) {
+      width: 130px;
+    }
   }
 
   .nav-links {
@@ -60,14 +64,14 @@
   }
 
   @media (max-width: 576px) {
-    padding: 40px 20px;
+    padding: 25px 20px;
   }
 }
 
 .hamburger {
   @media (max-width: 992px) {
     height: 100vh;
-    background-color: $clr-black;
+    background: linear-gradient(262deg, #5319a6 -30.56%, #7635d4 155.28%);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -85,7 +89,7 @@
 
     .hamburger-menu {
       position: absolute;
-      top: 50px;
+      top: 33px;
       right: 20px;
 
       &:active {
@@ -94,4 +98,20 @@
       }
     }
   }
+}
+
+.scrolled {
+  background: linear-gradient(262deg, #5319a6 -30.56%, #7635d4 155.28%);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  transition: all 0.3s ease;
+  padding: 25px 40px;
+
+  @media (max-width: 992px) {
+    padding: 25px 20px;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
 }

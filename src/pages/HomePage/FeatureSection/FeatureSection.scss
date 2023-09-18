@@ -1,0 +1,28 @@
+@import "../../../styles/global.scss";
+
+.feature-section {
+  position: relative;
+  margin-bottom: 140px;
+
+  .section-title {
+    text-align: center;
+    max-width: 549px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+
+    @media (max-width: 576px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .feature-card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+
+  @media (max-width: 576px) {
+    margin-bottom: 50px;
+  }
+}
