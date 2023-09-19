@@ -31,9 +31,15 @@ const FeatureSection = () => {
   ];
   return (
     <div className="feature-section container">
-      <h2 className="section-title">We Provides best Feature for customer</h2>
+      <h2 className="section-title" data-aos="fade-up">
+        We Provides best Feature for customer
+      </h2>
 
-      <div className="feature-card-wrapper">
+      <div
+        className="feature-card-wrapper"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
         {FeatureData.map((feature, index) => (
           <FeatureCard
             key={index}

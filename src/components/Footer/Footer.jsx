@@ -12,13 +12,17 @@ const Footer = () => {
     <div className="footer ">
       <div className="container">
         <div className="footer-content">
-          <div className="footer-column">
+          <div
+            className="footer-column"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <Link>
               <img src={images.Logo} alt="logo" className="logo" />
             </Link>
             <p className="desc">
-              Lorem ipsum dolor sit amet, consect etur adipiscing elit.
-              Ullamcorper purus eleifend purus faucibus faucibus.
+              Explore our services, stay updated with the latest trends, and
+              join us on a journey of endless possibilities.
             </p>
             <div className="social-wrapper">
               <Link className="social-link">
@@ -35,7 +39,11 @@ const Footer = () => {
               </Link>
             </div>
           </div>
-          <div className="footer-column">
+          <div
+            className="footer-column"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <h4 className="title">Resources</h4>
             <div className="link-wrapper">
               <Link className="footer-link">Services</Link>
@@ -44,7 +52,11 @@ const Footer = () => {
               <Link className="footer-link">Blog</Link>
             </div>
           </div>
-          <div className="footer-column">
+          <div
+            className="footer-column"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             <h4 className="title">Usefull links</h4>
             <div className="link-wrapper">
               <Link className="footer-link">Terms of Services</Link>
@@ -53,20 +65,23 @@ const Footer = () => {
               <Link className="footer-link">Contact us </Link>
             </div>
           </div>
-          <div className="footer-column">
+          <div
+            className="footer-column"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             <h4 className="title">Newsletter</h4>
             <p className="desc">
               Sign up and receive the lastest news via email.
             </p>
-            <div className="input-group">
+            <div className="email-box">
               <input
+                placeholder="Enter your email"
+                className="input"
+                name="email"
                 type="email"
-                className="email-input"
-                id="Email"
-                name="Email"
-                placeholder="Email address"
               />
-              <input className="button" value="Send" type="submit" />
+              <button className="button">Send</button>
             </div>
           </div>
         </div>

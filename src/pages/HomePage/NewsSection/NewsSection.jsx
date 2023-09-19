@@ -12,7 +12,7 @@ const NewsSection = () => {
       NewsAuthor: "by Stive Smithi",
       NewsTitle: "Running remote offsites and onbordings",
       NewsDesc:
-        "Explore the innovative strategies employed by Our Creative Team in running remote offsites and onboarding processes. Discover how we adapt and thrive in the evolving landscape of remote work.",
+        "Explore the innovative strategies employed by Our Creative Team in running remote offsites processes. Discover how we adapt and thrive in the evolving landscape of remote work.",
     },
     {
       NewsImg: images.News2,
@@ -27,8 +27,10 @@ const NewsSection = () => {
 
   return (
     <div className="news-section container">
-      <h2 className="section-title">Lastest insights news</h2>
-      <div className="news-wrapper">
+      <h2 className="section-title" data-aos="fade-up">
+        Lastest insights news
+      </h2>
+      <div className="news-wrapper" data-aos="fade-up" data-aos-delay="200">
         {newsData.map((news, index) => (
           <NewsCard
             key={index}

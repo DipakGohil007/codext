@@ -48,15 +48,17 @@ const PricingSection = () => {
 
   return (
     <div className="pricing-section container">
-      <h2 className="section-title">Choose your best pricing plan</h2>
-      <div className="pricing-filter">
+      <h2 className="section-title" data-aos="fade-up">
+        Choose your best pricing plan
+      </h2>
+      <div className="pricing-filter" data-aos="fade-up" data-aos-delay="300">
         <p className="type">
           Added for {isYearly ? <span>Yearly</span> : <span>Monthly</span>}
         </p>
         <Switch onChange={onChange} />
         <p className="interval">{isYearly ? "Monthly" : "Yearly"}</p>
       </div>
-      <div className="plan-wrapper">
+      <div className="plan-wrapper" data-aos="fade-up" data-aos-delay="400">
         {planData.map((plan, index) => (
           <PricingCard
             key={index}

@@ -47,10 +47,13 @@
           line-height: 150%;
         }
       }
+
+      @media (max-width: 440px) {
+        transform: translateY(-50px);
+      }
     }
 
     .hero-mockup {
-      flex: 0 1 50%;
       img {
         max-width: 751px;
         width: 100%;

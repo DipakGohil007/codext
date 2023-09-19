@@ -55,51 +55,55 @@ const ReviewSection = () => {
 
   return (
     <div className="review-section container">
-      <h2 className="section-title">Let's see our User's Review</h2>
-      <p className="section-description">
+      <h2 className="section-title" data-aos="fade-up">
+        Let's see our User's Review
+      </h2>
+      <p className="section-description" data-aos="fade-up">
         Gain valuable perspectives on the quality and impact of our services
         through their honest reviews.
       </p>
 
-      <Swiper
-        slidesPerView={3}
-        spaceBetween={30}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: true,
-        }}
-        grabCursor={true}
-        pagination={{
-          clickable: true,
-        }}
-        breakpoints={{
-          0: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },
-          576: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          992: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
-        }}
-        modules={[Autoplay, Pagination]}
-        className="mySwiper"
-      >
-        {userData.map((review, index) => (
-          <SwiperSlide key={index}>
-            <ReviewCard
-              UserReview={review.UserReview}
-              UserImage={review.UserImage}
-              UserName={review.UserName}
-              UserDesignation={review.UserDesignation}
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <div className="swiper-wrapper" data-aos="fade-up" data-aos-delay="400">
+        <Swiper
+          slidesPerView={3}
+          spaceBetween={30}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: true,
+          }}
+          grabCursor={true}
+          pagination={{
+            clickable: true,
+          }}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            576: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            992: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+          }}
+          modules={[Autoplay, Pagination]}
+          className="mySwiper"
+        >
+          {userData.map((review, index) => (
+            <SwiperSlide key={index}>
+              <ReviewCard
+                UserReview={review.UserReview}
+                UserImage={review.UserImage}
+                UserName={review.UserName}
+                UserDesignation={review.UserDesignation}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </div>
   );
 };

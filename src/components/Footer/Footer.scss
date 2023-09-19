@@ -4,6 +4,7 @@
   background-color: $clr-black;
   .footer-content {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding-top: 100px;
     padding-bottom: 80px;
@@ -19,12 +20,18 @@
 
         @media (max-width: 576px) {
           width: 130px;
+          margin-bottom: 20px;
         }
       }
 
       .title {
         @include inter(22px, $clr-white, 500, 140%);
         margin-bottom: 30px;
+
+        @media (max-width: 576px) {
+          font-size: 18px;
+          margin-bottom: 17px;
+        }
       }
 
       .link-wrapper {
@@ -35,6 +42,10 @@
         .footer-link {
           @include inter(16px, $clr-white, 400, 160%);
           opacity: 0.7;
+
+          @media (max-width: 576px) {
+            font-size: 15px;
+          }
         }
       }
 
@@ -43,6 +54,15 @@
         opacity: 0.7;
         max-width: 288px;
         margin-bottom: 30px;
+
+        @media (max-width: 576px) {
+          font-size: 15px;
+          margin-bottom: 20px;
+        }
+
+        @media (min-width: 576px) and (max-width: 992px) {
+          max-width: 200px;
+        }
       }
 
       .social-wrapper {
@@ -57,39 +77,93 @@
           padding: 10px;
           color: $clr-white;
           border: 1px solid $clr-white-50;
+          transition: all 0.5s ease;
+
+          &:hover {
+            filter: opacity(0.5);
+          }
+
+          @media (max-width: 576px) {
+            font-size: 15px;
+          }
         }
       }
+      .email-box {
+        display: flex;
 
-      .input-group {
-        border-radius: 5px;
-        border: 1px solid rgba(255, 255, 255, 0.5);
-
-        .email-input {
-          padding-block: 15px;
-          padding-left: 30px;
-          background-color: $clr-black;
+        .input {
+          @include inter(16px, $clr-white-50, 400, 160%);
+          max-width: 200px;
+          padding: 15px;
           color: $clr-white;
-          border: none;
-          @include inter(16px, $clr-white, 400, 160%);
-
-          &::placeholder {
-            @include inter(16px, $clr-white, 400, 160%);
-            opacity: 0.7;
-          }
+          background-color: $clr-black;
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+          border: 2px solid $clr-white-50;
+          margin-right: -10px;
         }
 
         .button {
-          padding: 15px 30px;
           @include inter(16px, $clr-white, 500, 160%);
-          background-color: $clr-primary;
-          cursor: pointer;
           border: none;
+          background-color: $clr-primary;
+          text-decoration: none;
+          padding: 15px 30px;
+          color: $clr-white;
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: $clr-hover-blue;
+          }
         }
       }
     }
 
     @media (max-width: 992px) {
-      flex-direction: column;
+      gap: 30px;
+
+      .footer-column {
+        &:nth-child(1) {
+          flex: 1 1 30%;
+        }
+
+        &:nth-child(2) {
+          flex: 1 1 20%;
+        }
+        &:nth-child(3) {
+          flex: 1 1 40%;
+        }
+        &:nth-child(4) {
+          flex: 1 1 50%;
+        }
+      }
+    }
+
+    @media (max-width: 576px) {
+      .footer-column {
+        &:nth-child(1) {
+          flex: 1 1 100%;
+        }
+
+        &:nth-child(2) {
+          flex: 1 1 25%;
+        }
+
+        &:nth-child(3) {
+          flex: 1 1 25%;
+        }
+
+        &:nth-child(4) {
+          flex: 1 1 30%;
+        }
+      }
+    }
+
+    @media (max-width: 576px) {
+      padding-top: 50px;
+      padding-bottom: 50px;
     }
   }
 
@@ -98,5 +172,10 @@
     opacity: 0.7;
     text-align: center;
     padding-block: 30px;
+
+    @media (max-width: 576px) {
+      font-size: 16px;
+      padding-block: 20px;
+    }
   }
 }

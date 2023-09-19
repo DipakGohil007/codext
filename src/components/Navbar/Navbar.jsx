@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import { images } from "../../assets/images/images";
 import { Link } from "react-router-dom";
 import CtaButton from "../CtaButton/CtaButton";
-import { Button } from "antd";
 import { GiHamburgerMenu } from "react-icons/gi";
 import "./Navbar.scss";
 
@@ -56,9 +55,9 @@ const Navbar = () => {
         </Link>
         <CtaButton type="primary" text="FREE TRIAL" />
       </div>
-      <Button className="hamburger-menu" onClick={showNavbar}>
+      <button className="hamburger-menu-btn" onClick={showNavbar}>
         <GiHamburgerMenu />
-      </Button>
+      </button>
     </div>
   );
 };
